@@ -48,13 +48,17 @@ namespace ASC_Desing_2
                                                               
  
      ";
-
+            
             Console.WriteLine(Welcome);
             Console.ReadLine();
 
+            //Clears the screen of ASC art
             Console.WriteLine("Press Enter to continue ask questions...");
-            Console.ReadLine();
-            Console.Clear();
+            Console.ReadLine(); //Pauses the programe by waiting for enter key
+            Console.Clear();  
+
+
+
 
             //Reset the console color to hwite
             Console.ForegroundColor = ConsoleColor.White;
