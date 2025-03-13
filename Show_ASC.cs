@@ -30,24 +30,18 @@ namespace ASC_Desing_2
             //Displaying ASCII Art for Welcome message
             Console.Title = "ASCII Welcome";
             Console.ForegroundColor = ConsoleColor.Cyan;
-            string Welcome = @"  
+            string Welcome = @"     
 
 
-
-
-888       888        888                                      
-888   o   888        888                                      
-888  d8b  888        888                                      
-888 d888b 888 .d88b. 888 .d8888b .d88b. 88888b.d88b.  .d88b.  
-888d88888b888d8P  Y8b888d88P""   d88""""88b888 ""888 ""88bd8P  Y8b 
-88888P Y8888888888888888888     888  888888  888  88888888888 
-8888P   Y8888Y8b.    888Y88b.   Y88..88P888  888  888Y8b.     
-888P     Y888 ""Y8888 888 ""Y8888P ""Y88P"" 888  888  888 ""Y8888  
-                                                              
-                                                              
-                                                              
- 
-     ";
+                                            888       888        888                                      
+                                            888   o   888        888                                      
+                                            888  d8b  888        888                                      
+                                            888 d888b 888 .d88b. 888 .d8888b .d88b. 88888b.d88b.  .d88b.  
+                                            888d88888b888d8P  Y8b888d88P""   d88""""88b888 ""888 ""88bd8P  Y8b 
+                                            88888P Y8888888REO888888888     888  888888  888  8888REO88888 
+                                            8888P   Y8888Y8b.    888Y88b.   Y88..88P888  888  888Y8b.     
+                                            888P     Y888 ""Y8888 888 ""Y8888P ""Y88P"" 888  888  888 ""Y8888                  
+             ";
             
             Console.WriteLine(Welcome);
             Console.ReadLine();
