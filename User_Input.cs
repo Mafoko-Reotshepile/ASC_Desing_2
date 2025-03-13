@@ -11,11 +11,15 @@ namespace ASC_Desing_2
             Console.Write("[ CAA ] :");
 
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("What is your name? ");
-            
+            Console.WriteLine(" What is your name? ");
+
+           
             //Creating a string variable to store name form user input
             String Name = Console.ReadLine();
-            Console.WriteLine("Hello:" + Name);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("[ CAA ] :");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Hello  " + Name);
 
         }
     }
