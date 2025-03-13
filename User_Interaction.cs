@@ -3,7 +3,7 @@ using System;
 
 namespace ASC_Desing_2
 {
-    internal class User_Interaction
+    public class User_Interaction
     {
         public User_Interaction()
         {
