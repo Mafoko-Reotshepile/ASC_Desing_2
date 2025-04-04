@@ -26,7 +26,7 @@ namespace ASC_Desing_2
             Bitmap image = new Bitmap(new_path);
 
             //Set the size of the image  
-            image = new Bitmap(image, new Size(50, 120));
+            image = new Bitmap(image, new Size(50, 80));
 
             //outer and inner loop
             for (int height = 0; height < image.Height; height++)
