@@ -11,10 +11,10 @@ namespace ASC_Desing_2
         public logo_Display()
         {
             //Get the full location of the project
-            string full_location = AppDomain.CurrentDomain.BaseDirectory;
+            string project_location = AppDomain.CurrentDomain.BaseDirectory;
 
             //replace the bin\Debug folder in the full_location
-            string new_location = full_location.Replace("bin\\Debug\\", "");
+            string new_location = project_location.Replace("bin\\Debug\\", "");
 
 
             //Combine the path
@@ -26,7 +26,7 @@ namespace ASC_Desing_2
             Bitmap image = new Bitmap(new_path);
 
             //Set the size of the image  
-            image = new Bitmap(image, new Size(50, 80));
+            image = new Bitmap(image, new Size(80, 40));
 
             //outer and inner loop
             for (int height = 0; height < image.Height; height++)
@@ -37,7 +37,7 @@ namespace ASC_Desing_2
                 {
                     Color pixelColor = image.GetPixel(width, height);
                     int gray = (pixelColor.R + pixelColor.G + pixelColor.B) / 3;
-                    char asciiChar = gray > 200 ? '.' : gray > 150 ? '*' : gray > 100 ? 'o' : gray > 50 ? '#' : '0';
+                    char asciiChar = gray > 200 ? '.' : gray > 150 ? '*' : gray > 100 ? '0' : gray > 50 ? '#' : '0';
                     Console.Write(asciiChar);
 
 

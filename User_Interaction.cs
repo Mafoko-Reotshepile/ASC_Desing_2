@@ -18,6 +18,8 @@ namespace ASC_Desing_2
             Questions.Add("A password should be at least 12 characters long (ideally 16 characters or more); our password-related research has found that 45 percent of Americans use passwords of eight characters or less, which are not as secure as longer passwords..");
             Questions.Add("phishing is when criminals use scam emails, text messages or phone calls to trick their victims. The aim is often to make you visit a website, which may download a virus onto your computer, or steal bank details or other personal information.");
             Questions.Add("When browsing the internet take care to make sure that the site that you are on is secure. \r\nTake note to check for \"https://\" with particular care to the \"s\" as that will mean that site is \"secure\". \r\n\r\nSome web browsers will also display the icons below to help you determine whether or not a site is secure.\r\nTo check a site's security, to the left of the web address, look at the security status:");
+            Questions.Add("cybercrime encompasses a wide range of criminal activities that are carried out using digital devices and/or networks. These crimes involve the use of technology to commit fraud, identity theft, data breaches, computer viruses, scams, and expanded upon in other malicious acts.");
+            Questions.Add("cybersecurity is the application of technologies, processes and controls to protect systems, networks, programs, devices and data from cyber attacks.\r\n\r\nIt aims to reduce the risk of cyber attacks and protect against the unauthorised exploitation of systems, networks and technologies.");
 
             ignore.Add("tell");
             ignore.Add("me");
