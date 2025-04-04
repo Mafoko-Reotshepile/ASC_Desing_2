@@ -15,8 +15,9 @@ namespace ASC_Desing_2
 
 
             //Add and then Store in the array List
-            Questions.Add("Password to be protected.");
-            Questions.Add("What is a firewall");
+            Questions.Add("A password should be at least 12 characters long (ideally 16 characters or more); our password-related research has found that 45 percent of Americans use passwords of eight characters or less, which are not as secure as longer passwords..");
+            Questions.Add("phishing is when criminals use scam emails, text messages or phone calls to trick their victims. The aim is often to make you visit a website, which may download a virus onto your computer, or steal bank details or other personal information.");
+            Questions.Add("When browsing the internet take care to make sure that the site that you are on is secure. \r\nTake note to check for \"https://\" with particular care to the \"s\" as that will mean that site is \"secure\". \r\n\r\nSome web browsers will also display the icons below to help you determine whether or not a site is secure.\r\nTo check a site's security, to the left of the web address, look at the security status:");
             ignore.Add("tell");
             ignore.Add("me");
             ignore.Add("about");

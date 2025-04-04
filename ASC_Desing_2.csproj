@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Show_ASC.cs" />
     <Compile Include="User_Input.cs" />
+    <Compile Include="User_Input1.cs" />
     <Compile Include="User_Interaction.cs" />
   </ItemGroup>
   <ItemGroup>

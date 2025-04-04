@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 
-namespace ASC_Design_2
+namespace ASC_Desing_2
 {
-    public class User_Input
+    internal class User_Input
     {
         public User_Input()
         {
+
+
+
             // Change CAA text color to red
             Console.ForegroundColor = ConsoleColor.Red;
             Console.Write("[ CAA ] : ");
@@ -38,11 +41,7 @@ namespace ASC_Design_2
                 "My purpose is to educate about Cybersecurity."
             };
 
-            List<string> userIgnoreWords = new List<string> 
-            { 
-                "how", "what" 
-            
-            };
+            List<string> userIgnoreWords = new List<string> { "how", "what's" };
 
             // User input for question
             Console.ForegroundColor = ConsoleColor.Blue;
