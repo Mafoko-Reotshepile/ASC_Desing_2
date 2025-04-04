@@ -27,6 +27,7 @@ namespace ASC_Desing_2
             Console.WriteLine(title);
             Console.ReadLine();
 
+           
             //Displaying ASCII Art for Welcome message
             Console.Title = "ASCII Welcome";
             Console.ForegroundColor = ConsoleColor.Cyan;

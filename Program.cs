@@ -10,10 +10,12 @@ namespace ASC_Desing_2
     {
         static void Main(string[] args)
         {
+            new logo_Display() { };
+            new Play_Sound() { };
             new Show_ASC() { };
             new User_Input() { };
             new User_Interaction() { };
-            new Play_Sound() { };
+           
             
         }
     }

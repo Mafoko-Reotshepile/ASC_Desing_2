@@ -1,108 +1,95 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace ASC_Desing_2
+namespace ASC_Design_2
 {
     public class User_Input
     {
         public User_Input()
         {
-            
-
-            //Change color for CAA to red
+            // Change CAA text color to red
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("[ CAA ] :");
-            
+            Console.Write("[ CAA ] : ");
+
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine(" What is your name? ");
+            Console.WriteLine("What is your name?");
 
-
-            //Creating a string variable to store name form user input
+            // Get user's name
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("[ User ] :");
-            Console.ForegroundColor = ConsoleColor.White;   
-            String Name = Console.ReadLine();
-             
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("[ CAA ] :");
+            Console.Write("[ User ] : ");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Hello  " + Name);
+            string name = Console.ReadLine()?.Trim();
 
-            //Try Filtering in here
-            //Declaration and array declatartin
-            ArrayList User_Questions = new ArrayList();
-            ArrayList User_ignore = new ArrayList();
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                name = "User"; // Default name if input is empty
+            }
 
-
-            //Add and then Store in the array List
-            User_Questions.Add("I'm good thanks.");
-            User_Questions.Add("My purpose is to eduvate about Cybersecurity");
-            User_ignore.Add("How");
-            User_ignore.Add("What's");
-           
-
-            //Prompt usre to ask question
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.Write("[ CAA ] :");
-            Console.ForegroundColor = ConsoleColor.White;   
-            Console.WriteLine("How can I help you today?");
-            string ask = Console.ReadLine();
+            Console.Write("[ CAA ] : ");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"Hello {name}! How can I help you today?");
 
-            
-            //Split the question and store in 1D array
-            string[] filtered_question = ask.Split(' ');
-            ArrayList correct_filtered = new ArrayList();
-
-
-            //Display using the for loop
-            //as it search it should filter more
-            Boolean found = false;
-
-            for (int count = 0; count < filtered_question.Length; count++)
+            // List of predefined questions and ignored words
+            List<string> userQuestions = new List<string>
             {
-                //Final Filter
-                if (!User_ignore.Contains(filtered_question[count]))
+                "I'm good, thanks.",
+                "My purpose is to educate about Cybersecurity."
+            };
+
+            List<string> userIgnoreWords = new List<string> { "how", "what's" };
+
+            // User input for question
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.Write($"[ {name} ] : ");
+            Console.ForegroundColor = ConsoleColor.White;
+            string ask = Console.ReadLine()?.ToLower().Trim(); // Convert input to lowercase
+
+            if (string.IsNullOrWhiteSpace(ask))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("[ CAA ] : ");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Please enter a valid question.");
+                return;
+            }
+
+            // Filter ignored words
+            List<string> filteredWords = ask.Split(' ')
+                                            .Where(word => !userIgnoreWords.Contains(word))
+                                            .ToList();
+
+            if (filteredWords.Count == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("[ CAA ] : ");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Please ask something meaningful.");
+                return;
+            }
+
+            // Search for relevant responses
+            bool found = false;
+            foreach (string question in userQuestions)
+            {
+                if (filteredWords.Any(word => question.ToLower().Contains(word)))
                 {
-                    //Assign to true
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("[ CAA ] : ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine(question);
                     found = true;
-
-                    //Add the value to correct filtered
-                    correct_filtered.Add(filtered_question[count]);
-
-
                 }
-
-
             }
 
-            //Check if found 
-            if (found)
+            if (!found)
             {
-                //loop to show user answers
-                for (int counting = 0; counting < correct_filtered.Count; counting++)
-                {
-                    //Display Answer
-                    for (int count = 0; count < User_Questions.Count; count++)
-                    {
-                        //Final Display
-                        if (User_Questions[count].ToString().Contains(correct_filtered[counting].ToString()))
-                        {
-                            //output
-                            Console.WriteLine(User_Questions[count].ToString());
-
-                        }
-
-                    }
-
-                }
-
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("[ CAA ] : ");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("I am sorry, I do not have an answer for that.");
             }
-            else
-            {
-                Console.WriteLine("Please search something.");
-            }
-
-
         }
     }
 }
