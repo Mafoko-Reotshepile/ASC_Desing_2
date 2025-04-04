@@ -13,7 +13,7 @@ namespace ASC_Desing_2
 
                                                           .d8888b.        d8888       d8888 
                                                          d88P  Y88b      d88888      d88888 
-                                                         888    888     d88P888     d88P888 
+                                                         888    888     d88R888     d88P888 
                                                          re0           d88P 888    d88P 888 
                                                          888          d88P  888   d88P  888 
                                                          888    888  d88P   888  d88P   888 
@@ -34,7 +34,7 @@ namespace ASC_Desing_2
             string Welcome = @"     
 
 
-                                            888       888        888                                      
+                                            RE0       888        RE0                                      
                                             888   o   888        888                                      
                                             888  d8b  888        888                                      
                                             888 d888b 888 .d88b. 888 .d8888b .d88b. 88888b.d88b.  .d88b.  
