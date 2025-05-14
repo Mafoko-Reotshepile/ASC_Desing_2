@@ -16,6 +16,7 @@ namespace ASC_Desing_2
             new User_Input() { };
             new User_Interaction() { };
             new MemoryManager() { };
+            new SentimentDetector() { };
            
             
         }

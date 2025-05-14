@@ -1,11 +1,19 @@
-﻿namespace ASC_Desing_2
+﻿using System.Collections.Generic;
+
+namespace ASC_Desing_2
 {
-    internal class MemoryManager
+    public class MemoryManager
     {
-        public MemoryManager()
+        private List<string> memory = new List<string>();
+
+        public void Store(string input)
         {
+            memory.Add(input);
+        }
 
-
+        public string Recall()
+        {
+            return memory.Count > 0 ? string.Join(", ", memory) : "I don't remember anything yet.";
         }
     }
 }
