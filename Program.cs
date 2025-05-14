@@ -15,6 +15,7 @@ namespace ASC_Desing_2
             new Show_ASC() { };
             new User_Input() { };
             new User_Interaction() { };
+            new MemoryManager() { };
            
             
         }
