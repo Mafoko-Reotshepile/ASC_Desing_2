@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KeywordDetector.cs" />
     <Compile Include="logo_Display.cs" />
     <Compile Include="MemoryManager.cs" />
     <Compile Include="Play_Sound.cs" />
